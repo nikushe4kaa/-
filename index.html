@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Проект </title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Фотограф Вероніка</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    header h1 {
+      font-size: 3.5em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    nav {
+      background: #343a40;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 25px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #495057;
+    }
+    #scroll-btn {
+      padding: 12px 25px;
+      background: #ffc107;
+      color: #212529;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1em;
+      transition: background 0.3s;
+    }
+    #scroll-btn:hover {
+      background: #e0a800;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    section h2 {
+      margin-bottom: 30px;
+      font-size: 2.2em;
+    }
+    .portfolio {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .portfolio img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .portfolio img:hover {
+      transform: scale(1.05);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea {
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    button[type="submit"] {
+      background-color: #343a40;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    button[type="submit"]:hover {
+      background-color: #495057;
+    }
+    footer {
+      background: #343a40;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9em;
+    }
+
+    .github-corner:hover .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
+    }
+    @keyframes octocat-wave {
+      0%, 100% { transform: rotate(0); }
+      20%, 60% { transform: rotate(-25deg); }
+      40%, 80% { transform: rotate(10deg); }
+    }
+    @media (max-width: 500px) {
+      .github-corner:hover .octo-arm {
+        animation: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .portfolio img {
+        width: 90%;
+        height: auto;
+      }
+      nav a {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Фотограф Вероніка</h1>
+    <p>Зберігаю емоції та моменти у світлинах</p>
+    <button id="scroll-btn">Портфоліо ↓</button>
+  </header>
+
+  <nav>
+    <a href="#portfolio">Портфоліо</a>
+    <a href="#contact">Контакти</a>
+    <a href="#form">Зворотний зв’язок</a>
+  </nav>
+
+  <section id="portfolio" class="portfolio">
+    <h2>Мої роботи</h2>
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Forest">
+    <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91" alt="Portrait">
+    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="Nature">
+    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Family">
+    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f" alt="Studio">
+  </section>
+
+  <section id="contact">
+    <h2>Контактна інформація</h2>
+    <p>📧 Email: ngurtova79@gmail.com</p>
+    <p>📞 Телефон: +380 96 802 89 35</p>
+    <p>📍 Місто: Київ</p>
+  </section>
+
+  <section id="form">
+    <h2>Форма зворотного зв’язку</h2>
+    <form>
+      <input type="text" placeholder="Ваше ім’я" required>
+      <input type="email" placeholder="Ваш Email" required>
+      <textarea rows="5" placeholder="Ваше повідомлення" required></textarea>
+      <button type="submit">Надіслати</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Фотограф Вероніка. Усі права захищено.
+  </footer>
+
+  <!-- GitHub Corner -->
+  <a href="https://github.com/nikushe4kaa" class="github-corner" aria-label="Переглянути код на GitHub" target="_blank">
+    <svg width="80" height="80" viewBox="0 0 250 250"
+         style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0; z-index: 1000;"
+         aria-hidden="true">
+      <path d="M0,0 L115,0 L115,115 L0,115 Z"></path>
+      <path class="octo-arm" fill="currentColor" d="M128.3,109.0..."></path>
+      <path class="octo-body" fill="currentColor" d="M115.0,115.0..."></path>
+    </svg>
+  </a>
+
+  <script>
+    document.getElementById("scroll-btn").addEventListener("click", () => {
+      document.getElementById("portfolio").scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
